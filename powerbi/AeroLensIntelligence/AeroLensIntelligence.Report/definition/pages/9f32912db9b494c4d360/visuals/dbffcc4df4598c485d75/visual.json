@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "dbffcc4df4598c485d75",
+  "position": {
+    "x": 450,
+    "y": 30,
+    "z": 1001,
+    "height": 145,
+    "width": 385,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NetworkScenarios"
+                    }
+                  },
+                  "Property": "Fictional Operators"
+                }
+              },
+              "queryRef": "NetworkScenarios.Fictional Operators"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

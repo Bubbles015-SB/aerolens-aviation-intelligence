@@ -1,0 +1,32 @@
+/* AeroLens 3 engineering controls: inherits original design system */
+.enterprise-panel{margin-bottom:18px}
+.enterprise-panel h2{margin:8px 0 15px;font-size:21px}
+.al3slider{display:block;width:100%;margin:8px 0 25px;accent-color:#159ba7;cursor:pointer}
+.al3status{color:#136476;font-size:11px;letter-spacing:.12em;font-weight:800;margin:0 0 16px}
+.al3bars{display:grid;gap:15px;margin:24px 0}
+.al3bar{display:grid;grid-template-columns:135px 1fr 73px;align-items:center;gap:12px}
+.al3bar>div:first-child{display:flex;flex-direction:column;gap:4px}
+.al3bar b{font-size:13px;color:#234759}
+.al3bar small{font-size:10px;color:#8a9aa7}
+.al3bar strong{text-align:right;color:#294756;font-size:12px}
+.al3track{height:12px;border-radius:10px;background:#edf3f4;position:relative;overflow:hidden}
+.al3track>span{height:100%;display:block;border-radius:10px;background:linear-gradient(90deg,#1b96a2,#0d5766);min-width:0}
+.al3table{width:100%;border-collapse:collapse;min-width:700px}
+.al3table th{font-size:10px;letter-spacing:.06em;color:#738b9b;padding:14px 10px;text-align:left;border-bottom:1px solid #e4ecee}
+.al3table td{font-size:12px;padding:12px 10px;border-bottom:1px solid #eef1f4;color:#354d5b}
+.al3table tbody tr:hover{background:#f3fafa}
+.al3table .positive{color:#138a77}.al3table .negative{color:#c35a57}
+.al3grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.al3grid3>div{padding:16px;background:#f5f9fa;border:1px solid #e4eef0;border-radius:12px}
+.al3grid3 strong{font-size:13px;color:#234759}.al3grid3 p{font-size:12px;color:#607789;line-height:1.65;margin-top:6px}
+.al3filter{display:flex;align-items:center;gap:14px;margin:18px 0;flex-wrap:wrap}
+.al3filter>label{margin:0}.al3filter select{width:260px}
+.al3pill{padding:6px 9px;font-size:10px;border-radius:8px;font-weight:750;white-space:nowrap}
+.al3pill.good{background:#e9f8f3;color:#177765}.al3pill.warn{background:#fff1df;color:#9b631d}
+.al3forecast{height:220px;display:flex;gap:6px;align-items:flex-end;margin:24px 0 14px;border-bottom:2px solid #cddde1;padding:0 4px}
+.al3forecastcol{height:100%;flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px;min-width:0}
+.al3forecastbar{display:block;background:#228f9e;border-radius:5px 5px 0 0;width:100%;min-height:2px}
+.al3forecastbar.forecast{background:#d6a257}
+.al3forecastcol small{font-size:9px;color:#7a8995}
+#page-forecast .adv-upload{display:block;width:100%;margin:15px 0}
+@media(max-width:900px){.al3bar{grid-template-columns:90px 1fr 63px;gap:8px}.al3grid3{grid-template-columns:1fr}.al3table{min-width:640px}.al3forecast{gap:3px}.al3forecastcol small{font-size:8px}}

@@ -1,0 +1,29 @@
+airport,city,region,passengers_2024,passengers_2025
+ATL,Atlanta,South,739622,790122
+AUS,Austin,South,205029,247328
+BOS,Boston,Northeast,1071220,1105185
+ORD,Chicago,Midwest,1135610,1069136
+DFW,Dallas / Fort Worth,South,929411,854580
+DEN,Denver,West,437449,418019
+DTW,Detroit,Midwest,140781,150722
+IAH,Houston,South,538629,529832
+LAS,Las Vegas,West,388475,424994
+LAX,Los Angeles,West,1679883,1459443
+MIA,Miami,South,1072645,1062096
+MSP,Minneapolis / St Paul,Midwest,140871,163468
+BNA,Nashville,South,155981,156481
+MSY,New Orleans,South,88743,89716
+JFK,New York JFK,Northeast,3238557,3220238
+EWR,Newark,Northeast,952539,960824
+MCO,Orlando,South,348781,340732
+PHL,Philadelphia,Northeast,466426,464266
+PHX,Phoenix,West,344943,312083
+PIT,Pittsburgh,Northeast,94169,107689
+PDX,Portland,West,112800,126160
+RDU,Raleigh,South,144159,145802
+SLC,Salt Lake City,West,96090,95198
+SAN,San Diego,West,256086,240757
+SFO,San Francisco,West,1069332,1054553
+SEA,Seattle,West,538836,544704
+TPA,Tampa,South,142078,144111
+IAD,Washington Dulles,Northeast,809688,848093

@@ -1,0 +1,102 @@
+table FleetScenarios
+
+	measure 'Routes in Scenario' = COUNTROWS('FleetScenarios')
+		formatString: #,##0
+
+	measure 'Assumed Weekly Demand' = SUM('FleetScenarios'[assumed_weekly_demand])
+		formatString: #,##0
+
+	measure 'Illustrative Maximum Weekly Seats' = SUMX('FleetScenarios','FleetScenarios'[max_weekly_flights]*'FleetScenarios'[seats_per_flight])
+		formatString: #,##0
+
+	measure 'Illustrative Maximum Block Hours' = SUMX('FleetScenarios','FleetScenarios'[max_weekly_flights]*'FleetScenarios'[assumed_block_hours_per_flight])
+		formatString: #,##0
+
+	measure 'Illustrative Maximum CO2 Tonnes' = SUMX('FleetScenarios','FleetScenarios'[max_weekly_flights]*'FleetScenarios'[assumed_emissions_t_per_flight])
+		formatString: #,##0
+
+	measure 'Illustrative Weekly Gross Sales at Capacity' = SUMX('FleetScenarios',MIN('FleetScenarios'[assumed_weekly_demand],'FleetScenarios'[max_weekly_flights]*'FleetScenarios'[seats_per_flight])*'FleetScenarios'[assumed_fare_gbp])
+		formatString: £#,##0
+
+	column code
+		dataType: string
+		summarizeBy: none
+		sourceColumn: code
+
+	column city
+		dataType: string
+		summarizeBy: none
+		sourceColumn: city
+
+	column observed_2025_market_passengers
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: observed_2025_market_passengers
+
+	column assumed_weekly_demand
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: assumed_weekly_demand
+
+	column seats_per_flight
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: seats_per_flight
+
+	column assumed_fare_gbp
+		dataType: double
+		summarizeBy: none
+		sourceColumn: assumed_fare_gbp
+
+	column assumed_departure_cost_gbp
+		dataType: double
+		summarizeBy: none
+		sourceColumn: assumed_departure_cost_gbp
+
+	column assumed_variable_cost_per_pax_gbp
+		dataType: double
+		summarizeBy: none
+		sourceColumn: assumed_variable_cost_per_pax_gbp
+
+	column assumed_block_hours_per_flight
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: assumed_block_hours_per_flight
+
+	column assumed_emissions_t_per_flight
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: assumed_emissions_t_per_flight
+
+	column max_weekly_flights
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: max_weekly_flights
+
+	column assumed_distance_km
+		dataType: double
+		summarizeBy: none
+		sourceColumn: assumed_distance_km
+
+	column classification
+		dataType: string
+		summarizeBy: none
+		sourceColumn: classification
+
+	partition FleetScenarios = m
+		mode: import
+		source =
+			let
+			    Source = #table(type table [code = type text, city = type text, observed_2025_market_passengers = Int64.Type, assumed_weekly_demand = Int64.Type, seats_per_flight = Int64.Type, assumed_fare_gbp = type number, assumed_departure_cost_gbp = type number, assumed_variable_cost_per_pax_gbp = type number, assumed_block_hours_per_flight = Int64.Type, assumed_emissions_t_per_flight = Int64.Type, max_weekly_flights = Int64.Type, assumed_distance_km = type number, classification = type text], {
+			            {"JFK", "New York JFK", 3220238, 5573, 250, 550.0, 29721.0, 48.0, 8, 139, 8, 5540.0, "MIXED: ONLY observed_2025_market_passengers is official CAA data"},
+			            {"LAX", "Los Angeles", 1459443, 2526, 250, 756.0, 41475.0, 48.0, 12, 209, 8, 8760.2, "MIXED: ONLY observed_2025_market_passengers is official CAA data"},
+			            {"BOS", "Boston", 1105185, 1913, 250, 530.0, 28627.0, 48.0, 7, 122, 8, 5240.4, "MIXED: ONLY observed_2025_market_passengers is official CAA data"},
+			            {"MIA", "Miami", 1062096, 1838, 250, 650.0, 35449.0, 48.0, 10, 174, 8, 7109.3, "MIXED: ONLY observed_2025_market_passengers is official CAA data"},
+			            {"ATL", "Atlanta", 790122, 1368, 250, 628.0, 34177.0, 48.0, 9, 156, 8, 6761.0, "MIXED: ONLY observed_2025_market_passengers is official CAA data"},
+			            {"SEA", "Seattle", 544704, 943, 250, 688.0, 37614.0, 48.0, 11, 191, 8, 7702.4, "MIXED: ONLY observed_2025_market_passengers is official CAA data"},
+			            {"MCO", "Orlando", 340732, 590, 250, 641.0, 34925.0, 48.0, 10, 174, 8, 6965.7, "MIXED: ONLY observed_2025_market_passengers is official CAA data"},
+			            {"DTW", "Detroit", 150722, 261, 250, 582.0, 31564.0, 48.0, 8, 139, 8, 6044.9, "MIXED: ONLY observed_2025_market_passengers is official CAA data"},
+			            {"RDU", "Raleigh", 145802, 252, 250, 593.0, 32190.0, 48.0, 9, 156, 8, 6216.5, "MIXED: ONLY observed_2025_market_passengers is official CAA data"}
+			    })
+			in
+			    Source

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "3085478fba33eda53be9",
+  "position": {
+    "x": 850,
+    "y": 30,
+    "z": 1003,
+    "height": 580,
+    "width": 380,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NetworkScenarios"
+                    }
+                  },
+                  "Property": "flight_id"
+                }
+              },
+              "queryRef": "NetworkScenarios.flight_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NetworkScenarios"
+                    }
+                  },
+                  "Property": "carrier"
+                }
+              },
+              "queryRef": "NetworkScenarios.carrier"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NetworkScenarios"
+                    }
+                  },
+                  "Property": "origin"
+                }
+              },
+              "queryRef": "NetworkScenarios.origin"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NetworkScenarios"
+                    }
+                  },
+                  "Property": "destination"
+                }
+              },
+              "queryRef": "NetworkScenarios.destination"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NetworkScenarios"
+                    }
+                  },
+                  "Property": "duration_minutes"
+                }
+              },
+              "queryRef": "NetworkScenarios.duration_minutes"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

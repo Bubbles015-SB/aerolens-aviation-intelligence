@@ -1,0 +1,12 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	discourageImplicitMeasures
+
+ref table MarketObservations
+ref table FleetScenarios
+ref table EvidenceRegister
+ref table NetworkScenarios
+ref table EmissionsScenarios
+ref table ForecastDemo

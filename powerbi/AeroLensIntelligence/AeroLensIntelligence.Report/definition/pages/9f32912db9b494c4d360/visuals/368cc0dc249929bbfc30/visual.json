@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "368cc0dc249929bbfc30",
+  "position": {
+    "x": 40,
+    "y": 210,
+    "z": 1002,
+    "height": 400,
+    "width": 790,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NetworkScenarios"
+                    }
+                  },
+                  "Property": "origin"
+                }
+              },
+              "queryRef": "NetworkScenarios.origin"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NetworkScenarios"
+                    }
+                  },
+                  "Property": "Synthetic Flight Legs"
+                }
+              },
+              "queryRef": "NetworkScenarios.Synthetic Flight Legs"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

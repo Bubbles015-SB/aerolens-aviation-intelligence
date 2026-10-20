@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "8ef2b0ad441ab52f21ea",
+  "position": {
+    "x": 40,
+    "y": 210,
+    "z": 1002,
+    "height": 400,
+    "width": 790,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EvidenceRegister"
+                    }
+                  },
+                  "Property": "requirement"
+                }
+              },
+              "queryRef": "EvidenceRegister.requirement"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EvidenceRegister"
+                    }
+                  },
+                  "Property": "Synthetic Documents"
+                }
+              },
+              "queryRef": "EvidenceRegister.Synthetic Documents"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

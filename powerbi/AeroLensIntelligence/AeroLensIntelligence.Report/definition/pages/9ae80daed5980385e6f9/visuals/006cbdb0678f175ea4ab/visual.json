@@ -1,0 +1,76 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "006cbdb0678f175ea4ab",
+  "position": {
+    "x": 850,
+    "y": 30,
+    "z": 1003,
+    "height": 580,
+    "width": 380,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EvidenceRegister"
+                    }
+                  },
+                  "Property": "id"
+                }
+              },
+              "queryRef": "EvidenceRegister.id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EvidenceRegister"
+                    }
+                  },
+                  "Property": "requirement"
+                }
+              },
+              "queryRef": "EvidenceRegister.requirement"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EvidenceRegister"
+                    }
+                  },
+                  "Property": "status"
+                }
+              },
+              "queryRef": "EvidenceRegister.status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EvidenceRegister"
+                    }
+                  },
+                  "Property": "issues"
+                }
+              },
+              "queryRef": "EvidenceRegister.issues"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

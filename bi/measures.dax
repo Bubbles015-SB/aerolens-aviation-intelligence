@@ -1,0 +1,45 @@
+-- AeroLens DAX measure recipes. Import the CSV using route_analysis.m as query "Routes".
+-- These operate ONLY on observed all-airline CAA passengers.
+
+2024 Passengers = SUM(Routes[y2024])
+
+2025 Passengers = SUM(Routes[y2025])
+
+Absolute Change = [2025 Passengers] - [2024 Passengers]
+
+Weighted Growth = DIVIDE([Absolute Change], [2024 Passengers])
+
+Distinct Markets = DISTINCTCOUNT(Routes[code])
+
+Markets Growing = COUNTROWS(FILTER(Routes, Routes[y2025] > Routes[y2024]))
+
+Markets Declining = COUNTROWS(FILTER(Routes, Routes[y2025] < Routes[y2024]))
+
+Passenger Share Within Current Selection =
+    DIVIDE([2025 Passengers], CALCULATE([2025 Passengers], ALLSELECTED(Routes[code])))
+
+Data Integrity Failures = COUNTROWS(FILTER(Routes, NOT Routes[QA_DeltaCorrect]))
+
+-- Hypothetical only. Create What-if parameter tables separately:
+-- 'Assumed Capture'[Assumed Capture Value] 0.005..0.12
+-- 'Assumed Fare'[Assumed Fare Value] 200..1500
+-- 'Assumed Departures'[Assumed Departures Value] 100..2000
+-- 'Assumed Seats'[Assumed Seats Value] 150..450
+-- These parameters are not sourced from airline operational records.
+
+Model Available Seats =
+    SELECTEDVALUE('Assumed Departures'[Assumed Departures Value],650) *
+    SELECTEDVALUE('Assumed Seats'[Assumed Seats Value],260)
+
+Model Requested Passengers =
+    [2025 Passengers] * SELECTEDVALUE('Assumed Capture'[Assumed Capture Value],0.05)
+
+Model Carried Passengers = MIN([Model Requested Passengers],[Model Available Seats])
+
+Model Load Factor = DIVIDE([Model Carried Passengers],[Model Available Seats])
+
+Model Gross Sales =
+    [Model Carried Passengers] * SELECTEDVALUE('Assumed Fare'[Assumed Fare Value],550)
+
+-- Actual revenue, actual seat load factors, real route profit and real QSI
+-- CANNOT be calculated from the CAA annual table alone.

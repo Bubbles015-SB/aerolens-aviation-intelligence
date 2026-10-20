@@ -1,0 +1,76 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "010c9009557e88db9a74",
+  "position": {
+    "x": 850,
+    "y": 30,
+    "z": 1003,
+    "height": 580,
+    "width": 380,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FleetScenarios"
+                    }
+                  },
+                  "Property": "code"
+                }
+              },
+              "queryRef": "FleetScenarios.code"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FleetScenarios"
+                    }
+                  },
+                  "Property": "assumed_block_hours_per_flight"
+                }
+              },
+              "queryRef": "FleetScenarios.assumed_block_hours_per_flight"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FleetScenarios"
+                    }
+                  },
+                  "Property": "assumed_emissions_t_per_flight"
+                }
+              },
+              "queryRef": "FleetScenarios.assumed_emissions_t_per_flight"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FleetScenarios"
+                    }
+                  },
+                  "Property": "assumed_fare_gbp"
+                }
+              },
+              "queryRef": "FleetScenarios.assumed_fare_gbp"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

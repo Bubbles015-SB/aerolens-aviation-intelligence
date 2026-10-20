@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "5f1488c05288022d0ba8",
+  "position": {
+    "x": 40,
+    "y": 210,
+    "z": 1002,
+    "height": 400,
+    "width": 790,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EmissionsScenarios"
+                    }
+                  },
+                  "Property": "code"
+                }
+              },
+              "queryRef": "EmissionsScenarios.code"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EmissionsScenarios"
+                    }
+                  },
+                  "Property": "Scenario Weekly CO2 Tonnes"
+                }
+              },
+              "queryRef": "EmissionsScenarios.Scenario Weekly CO2 Tonnes"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

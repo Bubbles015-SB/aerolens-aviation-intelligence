@@ -1,0 +1,41 @@
+id,requirement,criticality,revision,approved_revision,approved,due_date,status,issues,classification
+EV-0001,Material verification,high,2,2,True,2026-10-14,ready,,SYNTHETIC_SCENARIO
+EV-0002,Configuration baseline,critical,3,3,True,2026-10-15,ready,,SYNTHETIC_SCENARIO
+EV-0003,Structural substantiation,high,1,1,True,2026-10-16,ready,,SYNTHETIC_SCENARIO
+EV-0004,Inspection record,medium,2,2,True,2026-10-17,ready,,SYNTHETIC_SCENARIO
+EV-0005,Test procedure,medium,3,2,True,2026-10-18,blocked,revision_gap;overdue,SYNTHETIC_SCENARIO
+EV-0006,Design review evidence,high,1,1,True,2026-10-19,ready,,SYNTHETIC_SCENARIO
+EV-0007,Release acceptance,critical,2,2,False,2026-10-20,blocked,not_approved,SYNTHETIC_SCENARIO
+EV-0008,Part traceability,medium,3,3,True,2026-10-21,ready,,SYNTHETIC_SCENARIO
+EV-0009,Material verification,high,1,1,True,2026-10-22,ready,,SYNTHETIC_SCENARIO
+EV-0010,Configuration baseline,critical,2,1,True,2026-10-23,blocked,revision_gap,SYNTHETIC_SCENARIO
+EV-0011,Structural substantiation,high,3,3,True,2026-10-24,ready,,SYNTHETIC_SCENARIO
+EV-0012,Inspection record,medium,1,1,True,2026-10-25,ready,,SYNTHETIC_SCENARIO
+EV-0013,Test procedure,medium,2,2,True,2026-10-26,ready,,SYNTHETIC_SCENARIO
+EV-0014,Design review evidence,high,3,3,False,2026-10-13,blocked,not_approved;overdue,SYNTHETIC_SCENARIO
+EV-0015,Release acceptance,critical,1,0,True,2026-10-14,blocked,revision_gap;overdue,SYNTHETIC_SCENARIO
+EV-0016,Part traceability,medium,2,2,True,2026-10-15,ready,,SYNTHETIC_SCENARIO
+EV-0017,Material verification,high,3,3,True,2026-10-16,ready,,SYNTHETIC_SCENARIO
+EV-0018,Configuration baseline,critical,1,1,True,2026-10-17,ready,,SYNTHETIC_SCENARIO
+EV-0019,Structural substantiation,high,2,2,True,2026-10-18,ready,,SYNTHETIC_SCENARIO
+EV-0020,Inspection record,medium,3,2,True,2026-10-19,blocked,revision_gap,SYNTHETIC_SCENARIO
+EV-0021,Test procedure,medium,1,1,False,2026-10-20,blocked,not_approved,SYNTHETIC_SCENARIO
+EV-0022,Design review evidence,high,2,2,True,2026-10-21,ready,,SYNTHETIC_SCENARIO
+EV-0023,Release acceptance,critical,3,3,True,2026-10-22,ready,,SYNTHETIC_SCENARIO
+EV-0024,Part traceability,medium,1,1,True,2026-10-23,ready,,SYNTHETIC_SCENARIO
+EV-0025,Material verification,high,2,1,True,2026-10-24,blocked,revision_gap,SYNTHETIC_SCENARIO
+EV-0026,Configuration baseline,critical,3,3,True,2026-10-25,ready,,SYNTHETIC_SCENARIO
+EV-0027,Structural substantiation,high,1,1,True,2026-10-26,ready,,SYNTHETIC_SCENARIO
+EV-0028,Inspection record,medium,2,2,False,2026-10-13,blocked,not_approved;overdue,SYNTHETIC_SCENARIO
+EV-0029,Test procedure,medium,3,3,True,2026-10-14,ready,,SYNTHETIC_SCENARIO
+EV-0030,Design review evidence,high,1,0,True,2026-10-15,blocked,revision_gap;overdue,SYNTHETIC_SCENARIO
+EV-0031,Release acceptance,critical,2,2,True,2026-10-16,ready,,SYNTHETIC_SCENARIO
+EV-0032,Part traceability,medium,3,3,True,2026-10-17,ready,,SYNTHETIC_SCENARIO
+EV-0033,Material verification,high,1,1,True,2026-10-18,ready,,SYNTHETIC_SCENARIO
+EV-0034,Configuration baseline,critical,2,2,True,2026-10-19,ready,,SYNTHETIC_SCENARIO
+EV-0035,Structural substantiation,high,3,2,False,2026-10-20,blocked,not_approved;revision_gap,SYNTHETIC_SCENARIO
+EV-0036,Inspection record,medium,1,1,True,2026-10-21,ready,,SYNTHETIC_SCENARIO
+EV-0037,Test procedure,medium,2,2,True,2026-10-22,ready,,SYNTHETIC_SCENARIO
+EV-0038,Design review evidence,high,3,3,True,2026-10-23,ready,,SYNTHETIC_SCENARIO
+EV-0039,Release acceptance,critical,1,1,True,2026-10-24,ready,,SYNTHETIC_SCENARIO
+EV-0040,Part traceability,medium,2,1,True,2026-10-25,blocked,revision_gap,SYNTHETIC_SCENARIO

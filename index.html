@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AeroLens 3: aerospace and aviation intelligence spanning verified market data, fleet optimisation, sustainability, technical assurance and network scenarios." />
+  <title>AeroLens 3 — Aerospace & Aviation Decision Intelligence</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/style.css" /><link rel="stylesheet" href="assets/enterprise.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark"><span></span><span></span><span></span></div><div><strong>AEROLENS</strong><small>AVIATION INTELLIGENCE</small></div></div>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="navigation" aria-label="Main navigation">
+        <button class="nav-item active" data-page="market"><span class="nav-glyph">◫</span> Market intelligence <span class="nav-n">01</span></button>
+        <button class="nav-item" data-page="alliances"><span class="nav-glyph">⌁</span> Partnership network <span class="nav-n">02</span></button>
+        <button class="nav-item" data-page="quality"><span class="nav-glyph">▤</span> Data integrity <span class="nav-n">03</span></button>
+        <button class="nav-item" data-page="brief"><span class="nav-glyph">▧</span> Commercial scenarios <span class="nav-n">04</span></button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-label">REFERENCE</div>
+      <div class="side-mini">
+        <span class="dot cyan"></span><span>CAA observed market data</span>
+        <span class="dot amber"></span><span>Illustrative scenarios</span>
+      </div>
+      <a class="source-link" href="https://www.caa.co.uk/data-and-analysis/uk-aviation-market/airports/uk-airport-data/uk-airport-data-2025/annual-2025/" target="_blank" rel="noopener">Source: UK Civil Aviation Authority ↗</a>
+      <div class="sidebar-bottom"><div class="avatar">SS</div><div><strong>Salonee S.</strong><small>Independent portfolio project</small></div><span class="status-dot"></span></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><select id="mobilePageSelect" class="mobile-page-select" aria-label="Choose dashboard section"><option value="market">Market intelligence</option><option value="alliances">Partnership network</option><option value="quality">Data integrity</option><option value="brief">Commercial scenarios</option></select><div class="breadcrumb">RESEARCH WORKSPACE <span>/</span> <strong id="crumb">MARKET INTELLIGENCE</strong></div><div class="top-actions"><span class="status-live"><span></span> OFFLINE-READY</span><button id="downloadSnapshot" class="button button-outline">↧ Export data</button></div></header>
+      <div class="content">
+        <section id="page-market" class="page active" aria-label="Market intelligence">
+          <div class="eyebrow"><span class="eyebrow-line"></span> 2025 ANNUAL REVIEW <span class="eyebrow-sep">/</span> UK–UNITED STATES</div>
+          <div class="page-head"><div><h1>Transatlantic <em>market intelligence.</em></h1><p class="lede">A decision-support view of Heathrow–US airport-pair traffic, built from official UK Civil Aviation Authority statistics.</p></div><div class="year-pill"><span>REPORTING PERIOD</span><strong>2024 → 2025</strong></div></div>
+          <div class="insight-alert"><span class="alert-icon">i</span><p><strong>Read the data correctly.</strong> Figures represent <b>all-airline, both-direction passenger movements</b> on selected airport pairs—not a single airline’s passengers, seats, revenue, or profitability. Commercial values below are explicitly simulated.</p></div>
+          <div class="stats-grid">
+            <div class="stat-card"><div class="stat-label">SELECTED 2025 PASSENGERS <span class="stat-icon">↗</span></div><div id="metricPax" class="stat-number">—</div><div id="metricPaxSub" class="stat-foot">—</div></div>
+            <div class="stat-card"><div class="stat-label">YEAR-ON-YEAR CHANGE <span class="stat-icon">↗</span></div><div id="metricChange" class="stat-number">—</div><div id="metricChangeSub" class="stat-foot">—</div></div>
+            <div class="stat-card"><div class="stat-label">MARKETS ANALYSED <span class="stat-icon">⌖</span></div><div id="metricCount" class="stat-number">—</div><div class="stat-foot">Curated Heathrow–US airport pairs</div></div>
+            <div class="stat-card"><div class="stat-label">MARKETS GROWING <span class="stat-icon">◎</span></div><div id="metricGrowing" class="stat-number">—</div><div class="stat-foot">Higher 2025 than 2024 volume</div></div>
+          </div>
+          <div class="two-panel top-panels">
+            <section class="panel chart-panel"><div class="panel-head"><div><div class="panel-kicker">01 / MARKET MOVEMENT</div><h2>Route performance</h2><p>Passenger throughput by airport pair</p></div><div class="mini-tabs"><button class="mini-tab active" data-sort="volume">Volume</button><button class="mini-tab" data-sort="growth">Growth</button></div></div>
+              <div class="chart-filters"><div class="select-shell"><label for="regionFilter">REGION</label><select id="regionFilter"><option value="All">All U.S. regions</option><option value="Northeast">Northeast</option><option value="South">South</option><option value="Midwest">Midwest</option><option value="West">West</option></select></div><div class="select-shell"><label for="topCount">SHOW</label><select id="topCount"><option value="8">Top 8 routes</option><option value="12">Top 12 routes</option><option value="28">All routes</option></select></div><div class="legend"><i class="legend-24"></i>2024 <i class="legend-25"></i>2025</div></div>
+              <div id="barChart" class="bar-chart" role="img" aria-label="Comparison of passengers in 2024 and 2025 for selected routes"></div>
+              <div class="chart-caption"><span>Annual passengers · both directions · all airlines</span><span>CAA Table 12.1</span></div>
+            </section>
+            <section class="panel signals-panel"><div class="panel-head"><div><div class="panel-kicker">02 / OPPORTUNITY SIGNALS</div><h2>Changes worth investigating</h2><p>Screening signals, not investment decisions</p></div></div>
+              <div id="signals" class="signals"></div>
+              <div class="signal-note"><div class="note-symbol">✳</div><p>Growth alone does not establish route profitability, airline market share or feasibility. A credible route recommendation requires fare, seat capacity, contribution costs and schedule data.</p></div>
+            </section>
+          </div>
+          <section class="panel table-panel"><div class="panel-head table-title"><div><div class="panel-kicker">03 / MARKET REGISTER</div><h2>Explore the full selection</h2><p>Sortable airport-pair records with auditable source values</p></div><div class="table-actions"><input id="searchRoutes" class="searchbox" aria-label="Search markets" placeholder="⌕  Search city or code" /><button class="button button-outline" id="exportRoutes">↧ CSV</button></div></div>
+            <div class="table-overflow"><table id="routeTable"><thead><tr><th data-key="city">DESTINATION <span>↕</span></th><th data-key="region">REGION <span>↕</span></th><th class="num" data-key="y2024">2024 PAX <span>↕</span></th><th class="num" data-key="y2025">2025 PAX <span>↕</span></th><th class="num" data-key="delta">NET CHANGE <span>↕</span></th><th class="num" data-key="growth_pct">YOY <span>↕</span></th></tr></thead><tbody></tbody></table></div>
+            <div class="table-bottom"><span id="tableCount">—</span><span>Selected markets only · source: UK CAA annual 2025</span></div>
+          </section>
+        </section>
+
+        <section id="page-alliances" class="page" aria-label="Partnership network"><div class="panel">Preparing time-zone-aware network lab...</div></section>
+
+        <section id="page-quality" class="page" aria-label="Data integrity">
+          <div class="eyebrow"><span class="eyebrow-line"></span> TRANSPARENCY <span class="eyebrow-sep">/</span> REPRODUCIBILITY</div><div class="page-head"><div><h1>Evidence before <em>assumptions.</em></h1><p class="lede">Know exactly which observations are sourced, which metrics are derived, and which values are only for illustration.</p></div></div>
+          <div class="quality-grid"><div class="panel quality-head"><div class="panel-kicker">01 / VALIDATION</div><h2 id="validationTitle">Running checks...</h2><p id="validationSub">Data checks execute locally in your browser.</p><div id="validationChecks"></div></div>
+            <div class="panel lineage"><div class="panel-kicker">02 / PROVENANCE</div><h2>Data lineage</h2><div class="lineage-list"><div><span class="lineage-badge">01</span><section><strong>UK CAA annual 2025, Table 12.1</strong><p>Official 2025 versus 2024 airport-to-destination total passenger movements.</p></section></div><div><span class="lineage-badge">02</span><section><strong>Manually curated Heathrow–US selection</strong><p>28 markets selected and transcribed from the CAA table, retaining both years.</p></section></div><div><span class="lineage-badge">03</span><section><strong>Deterministic metrics</strong><p>Year-on-year percentage change and absolute change computed from the raw integers.</p></section></div><div><span class="lineage-badge amber">04</span><section><strong>Separate synthetic scenario model</strong><p>Alliance leg schedules and financial assumptions never enter the observed dataset.</p></section></div></div></div></div>
+          <section class="panel limits-panel"><div class="panel-kicker">03 / DATA CONTRACT</div><h2>What you can — and cannot — conclude</h2><div class="bounds"><div class="good"><strong>Supported by CAA data</strong><ul><li>2024 and 2025 total passengers by selected airport pair</li><li>Absolute and percentage passenger change</li><li>Relative scale and rank within this curated selection</li><li>Screening markets for further investigation</li></ul></div><div class="bad"><strong>Not supported by CAA Table 12.1 alone</strong><ul><li>Any individual airline’s revenue, share or profitability</li><li>Actual average fares, load factors or available seats</li><li>Month-by-month seasonality in this annual dataset</li><li>Real codeshare options, connection times or QSI scores</li></ul></div></div></section>
+          <div class="sources-panel"><strong>Source files</strong><a target="_blank" rel="noopener" href="https://www.caa.co.uk/Documents/Download/24007/87fb7670-4e10-4aeb-942d-509238aa25a1/17511">CAA Table 12.1 annual PDF ↗</a><a href="data/raw/caa_lhr_us_annual_2025_2024_curated.csv" download>Curated data CSV ↓</a><a href="data/advanced/synthetic_time_aware_schedule.json" download>Synthetic UTC schedule JSON ↓</a><a href="data/derived/route_summary.csv" download>Derived metrics CSV ↓</a></div>
+        </section>
+
+        <section id="page-brief" class="page" aria-label="Commercial scenario"><div class="panel">Preparing commercial sensitivity model...</div></section>
+        <footer class="footer"><span>© 2026 AeroLens — Independent research portfolio</span><span>Source: UK Civil Aviation Authority · Not affiliated with any airline, OEM, MRO or regulator.</span></footer>
+      </div>
+    </main>
+  </div>
+  <script src="assets/data.js"></script><script src="assets/app.js"></script><script src="assets/advanced_data.js"></script><script src="assets/advanced.js"></script><script src="assets/enterprise_data.js"></script><script src="assets/enterprise.js"></script>
+</body></html>

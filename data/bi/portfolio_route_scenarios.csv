@@ -1,0 +1,10 @@
+code,city,observed_2025_market_passengers,assumed_weekly_demand,seats_per_flight,assumed_fare_gbp,assumed_departure_cost_gbp,assumed_variable_cost_per_pax_gbp,assumed_block_hours_per_flight,assumed_emissions_t_per_flight,max_weekly_flights,assumed_distance_km,classification
+JFK,New York JFK,3220238,5573,250,550.0,29721.0,48,8,139,8,5540.0,MIXED: ONLY observed_2025_market_passengers is official CAA data
+LAX,Los Angeles,1459443,2526,250,756.0,41475.0,48,12,209,8,8760.2,MIXED: ONLY observed_2025_market_passengers is official CAA data
+BOS,Boston,1105185,1913,250,530.0,28627.0,48,7,122,8,5240.4,MIXED: ONLY observed_2025_market_passengers is official CAA data
+MIA,Miami,1062096,1838,250,650.0,35449.0,48,10,174,8,7109.3,MIXED: ONLY observed_2025_market_passengers is official CAA data
+ATL,Atlanta,790122,1368,250,628.0,34177.0,48,9,156,8,6761.0,MIXED: ONLY observed_2025_market_passengers is official CAA data
+SEA,Seattle,544704,943,250,688.0,37614.0,48,11,191,8,7702.4,MIXED: ONLY observed_2025_market_passengers is official CAA data
+MCO,Orlando,340732,590,250,641.0,34925.0,48,10,174,8,6965.7,MIXED: ONLY observed_2025_market_passengers is official CAA data
+DTW,Detroit,150722,261,250,582.0,31564.0,48,8,139,8,6044.9,MIXED: ONLY observed_2025_market_passengers is official CAA data
+RDU,Raleigh,145802,252,250,593.0,32190.0,48,9,156,8,6216.5,MIXED: ONLY observed_2025_market_passengers is official CAA data

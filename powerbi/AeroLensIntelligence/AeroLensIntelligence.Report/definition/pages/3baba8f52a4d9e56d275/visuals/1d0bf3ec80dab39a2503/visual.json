@@ -1,0 +1,76 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "1d0bf3ec80dab39a2503",
+  "position": {
+    "x": 850,
+    "y": 30,
+    "z": 1003,
+    "height": 580,
+    "width": 380,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EmissionsScenarios"
+                    }
+                  },
+                  "Property": "code"
+                }
+              },
+              "queryRef": "EmissionsScenarios.code"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EmissionsScenarios"
+                    }
+                  },
+                  "Property": "great_circle_km"
+                }
+              },
+              "queryRef": "EmissionsScenarios.great_circle_km"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EmissionsScenarios"
+                    }
+                  },
+                  "Property": "model_co2_t"
+                }
+              },
+              "queryRef": "EmissionsScenarios.model_co2_t"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EmissionsScenarios"
+                    }
+                  },
+                  "Property": "model_kg_co2_per_pax_km"
+                }
+              },
+              "queryRef": "EmissionsScenarios.model_kg_co2_per_pax_km"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

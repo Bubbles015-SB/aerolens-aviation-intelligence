@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "74769dd4f946c70fdd26",
+  "position": {
+    "x": 450,
+    "y": 30,
+    "z": 1001,
+    "height": 145,
+    "width": 385,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EmissionsScenarios"
+                    }
+                  },
+                  "Property": "Scenario Weekly Fuel Tonnes"
+                }
+              },
+              "queryRef": "EmissionsScenarios.Scenario Weekly Fuel Tonnes"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
